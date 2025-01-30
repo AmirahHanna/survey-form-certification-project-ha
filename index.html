@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Unofficial Spokane Transit Survey</h1>
+        <p id="description" class="description text-center">
+          NOTE: This survey is targeted toward students who have taken an STA bus (including Paratransit) at least once. If you haven’t, I kindly ask that you would not take this survey. Thank you!
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name" >Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control textarea"
+            placeholder="enter name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email" >Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control textarea"
+            placeholder="japplesmith5@ewu.edu"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control textarea"
+            placeholder="Age"
+          /> 
+        </div>
+        
+        
+
+        <div class="form-group">
+          <p>Do you rely on busses for transportation to or from school?</p>
+          <label>
+            <input
+              name="school-commute"
+              value="yes"
+              type="radio"
+              class="input-radio"
+              checked
+            />Yes, I do</label>
+          <label>
+          <label>
+            <input
+              name="school-commute"
+              value="Sometimes"
+              type="radio"
+              class="input-radio"
+            />Occasionally, yes</label>            
+            <input
+              name="school-commute"
+              value="no"
+              type="radio"
+              class="input-radio"
+            />No, I don't</label>
+        </div>
+
+        <div class="form-group">
+          <p>What area do you live in?</p>
+          <select id="dropdown" name="home" class="form-control" required>
+            <option disabled selected value>Select one</option>
+            <option value="spokane">Spokane</option>
+            <option value="valley">Spokane Valley</option>
+            <option value="liberty">Liberty Lake</option>
+            <option value="airway">Airway Heights</option>
+            <option value="cheney">Cheney</option>
+            <option value="medical">Medical Lake</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            What routes do you frequent?
+            <span class="clue">(Select all that apply)</span>
+          </p>
+
+          <label
+            ><input
+              name="frequent"
+              value="city-line"
+              type="checkbox"
+              class="input-checkbox city-line"
+            />City Line</label
+          >
+          <label>
+            <input
+              name="frequent"
+              value="frequent-routes"
+              type="checkbox"
+              class="input-checkbox frequent"
+            />Frequent</label
+          >
+          <label
+            ><input
+              name="frequent"
+              value="shuttle"
+              type="checkbox"
+              class="input-checkbox shuttle"
+            />Shuttle</label
+          >
+          <label
+            ><input
+              name="frequent"
+              value="regional"
+              type="checkbox"
+              class="input-checkbox regional"
+            />Regional</label
+          >
+          <label
+            ><input
+              name="frequent"
+              value="regular"
+              type="checkbox"
+              class="regular"
+            />Regular</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="commuter"
+              type="checkbox"
+              class="input-checkbox commuter"
+            />Commuter</label
+          >
+          
+        </div>
+
+        <div class="form-group">
+          <p>Feedback/Suggestions</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <p>Thank you for participating in the survey!</p>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
